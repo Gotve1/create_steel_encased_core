@@ -1,7 +1,7 @@
 package com.gotve.create_steel_encased_core;
 
 
-import com.gotve.create_steel_encased_core.item_registry.ItemRegistry;
+import com.gotve.create_steel_encased_core.registry.ItemRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

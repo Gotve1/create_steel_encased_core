@@ -9,7 +9,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 public class ItemTiers {
 
     public static final Tier COPPER_TIER = new Tier() {
-        @Override public int getUses() { return 131; }
+        @Override public int getUses() { return 128; }
         @Override public float getSpeed() { return 4.0f; }
         @Override public float getAttackDamageBonus() { return 1.0f; }
         @Override public int getLevel() { return 1; }
@@ -20,7 +20,7 @@ public class ItemTiers {
     };
 
     public static final Tier BRASS_TIER = new Tier() {
-        @Override public int getUses() { return 250; }
+        @Override public int getUses() { return 256; }
         @Override public float getSpeed() { return 6.0f; }
         @Override public float getAttackDamageBonus() { return 2.0f; }
         @Override public int getLevel() { return 2; }
@@ -31,7 +31,7 @@ public class ItemTiers {
     };
 
     public static final Tier STEEL_TIER = new Tier() {
-        @Override public int getUses() { return 1561; }
+        @Override public int getUses() { return 512; }
         @Override public float getSpeed() { return 8.0F; }
         @Override public float getAttackDamageBonus() { return 3.0F; }
         @Override public int getLevel() { return 3; }
@@ -42,7 +42,7 @@ public class ItemTiers {
     };
 
     public static final Tier NETHERSTEEL_TIER = new Tier() {
-        @Override public int getUses() { return 2031; }
+        @Override public int getUses() { return 1024; }
         @Override public float getSpeed() { return 9.0F; }
         @Override public float getAttackDamageBonus() { return 4.0F; }
         @Override public int getLevel() { return 4; }
