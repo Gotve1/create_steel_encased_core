@@ -1,6 +1,7 @@
 package com.gotve.create_steel_encased_core;
 
 
+import com.gotve.create_steel_encased_core.registry.CreativeTabRegistry;
 import com.gotve.create_steel_encased_core.registry.ItemRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,6 +19,7 @@ public class CreateSteelEncasedCore {
     public CreateSteelEncasedCore() {
 
         ItemRegistry.register(bus);
+        CreativeTabRegistry.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
