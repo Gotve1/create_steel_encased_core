@@ -42,13 +42,13 @@ public class ItemRegistry {
             () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS_REGISTRY.register("copper_chestplate",
-            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS_REGISTRY.register("copper_leggings",
-            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS_REGISTRY.register("copper_boots",
-            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
 
@@ -82,13 +82,13 @@ public class ItemRegistry {
             () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> BRASS_CHESTPLATE = ITEMS_REGISTRY.register("brass_chestplate",
-            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> BRASS_LEGGINGS = ITEMS_REGISTRY.register("brass_leggings",
-            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> BRASS_BOOTS = ITEMS_REGISTRY.register("brass_boots",
-            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
 
@@ -119,16 +119,16 @@ public class ItemRegistry {
     ///       Steel Armour     ///
     /// //////////////////////////
     public static final RegistryObject<ArmorItem> STEEL_HELMET = ITEMS_REGISTRY.register("steel_helmet",
-            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.STEEL, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> STEEL_CHESTPLATE = ITEMS_REGISTRY.register("steel_chestplate",
-            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.STEEL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> STEEL_LEGGINGS = ITEMS_REGISTRY.register("steel_leggings",
-            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.STEEL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> STEEL_BOOTS = ITEMS_REGISTRY.register("steel_boots",
-            () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.STEEL, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
 
@@ -162,13 +162,13 @@ public class ItemRegistry {
             () -> new ArmorItem(ModMaterials.NETHERSTEEL, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> NETHERSTEEL_CHESTPLATE = ITEMS_REGISTRY.register("nethersteel_chestplate",
-            () -> new ArmorItem(ModMaterials.NETHERSTEEL, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.NETHERSTEEL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> NETHERSTEEL_LEGGINGS = ITEMS_REGISTRY.register("nethersteel_leggings",
-            () -> new ArmorItem(ModMaterials.NETHERSTEEL, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.NETHERSTEEL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<ArmorItem> NETHERSTEEL_BOOTS = ITEMS_REGISTRY.register("nethersteel_boots",
-            () -> new ArmorItem(ModMaterials.NETHERSTEEL, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModMaterials.NETHERSTEEL, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
     @SuppressWarnings("removal")

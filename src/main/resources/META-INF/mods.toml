@@ -21,7 +21,6 @@ versionRange = "${forge_version_range}"
 ordering = "NONE"
 
 
-
 [[dependencies."${mod_id}"]]
 modId = "minecraft"
 mandatory = true

@@ -1,115 +1,223 @@
 package com.gotve.create_steel_encased_core.mod_tiers;
 
-import java.util.EnumMap;
-import java.util.function.Supplier;
-import net.minecraft.Util;
+import com.gotve.create_steel_encased_core.CreateSteelEncasedCore;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.LazyLoadedValue;
-import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("removal")
-public enum ModMaterials implements StringRepresentable, ArmorMaterial {
+public class ModMaterials {
 
-    COPPER("chainmail", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266651_) -> {
-        p_266651_.put(ArmorItem.Type.BOOTS, 1);
-        p_266651_.put(ArmorItem.Type.LEGGINGS, 4);
-        p_266651_.put(ArmorItem.Type.CHESTPLATE, 5);
-        p_266651_.put(ArmorItem.Type.HELMET, 2);
-    }), 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> {
-        return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/copper")));
-    }),
-    BRASS("iron", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266654_) -> {
-        p_266654_.put(ArmorItem.Type.BOOTS, 2);
-        p_266654_.put(ArmorItem.Type.LEGGINGS, 5);
-        p_266654_.put(ArmorItem.Type.CHESTPLATE, 6);
-        p_266654_.put(ArmorItem.Type.HELMET, 2);
-    }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-        return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/brass")));
-    }),
-    STEEL("diamond", 33, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266649_) -> {
-        p_266649_.put(ArmorItem.Type.BOOTS, 3);
-        p_266649_.put(ArmorItem.Type.LEGGINGS, 6);
-        p_266649_.put(ArmorItem.Type.CHESTPLATE, 8);
-        p_266649_.put(ArmorItem.Type.HELMET, 3);
-    }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
-        return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/steel")));
-    }),
-    NETHERSTEEL("netherite", 37, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
-        p_266655_.put(ArmorItem.Type.BOOTS, 3);
-        p_266655_.put(ArmorItem.Type.LEGGINGS, 6);
-        p_266655_.put(ArmorItem.Type.CHESTPLATE, 8);
-        p_266655_.put(ArmorItem.Type.HELMET, 3);
-    }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "nether/nethersteel")));
-    });
+    public static final ArmorMaterial COPPER = new ArmorMaterial() {
+        @Override
+        public int getDurabilityForType(ArmorItem.Type p_266807_) {
+            return switch (p_266807_) {
+                case HELMET -> 105;
+                case CHESTPLATE -> 140;
+                case LEGGINGS -> 155;
+                case BOOTS -> 135;
+            };
+        }
 
-    public static final StringRepresentable.EnumCodec<ModMaterials> CODEC = StringRepresentable.fromEnum(ModMaterials::values);
-    private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266653_) -> {
-        p_266653_.put(ArmorItem.Type.BOOTS, 13);
-        p_266653_.put(ArmorItem.Type.LEGGINGS, 15);
-        p_266653_.put(ArmorItem.Type.CHESTPLATE, 16);
-        p_266653_.put(ArmorItem.Type.HELMET, 11);
-    });
-    private final String name;
-    private final int durabilityMultiplier;
-    private final EnumMap<ArmorItem.Type, Integer> protectionFunctionForType;
-    private final int enchantmentValue;
-    private final SoundEvent sound;
-    private final float toughness;
-    private final float knockbackResistance;
-    private final LazyLoadedValue<Ingredient> repairIngredient;
+        @Override
+        public int getDefenseForType(ArmorItem.Type p_267168_) {
+            return switch (p_267168_) {
+                case HELMET -> 2;
+                case CHESTPLATE -> 5;
+                case LEGGINGS -> 4;
+                case BOOTS -> 1;
+            };
+        }
 
-    private ModMaterials(String p_268171_, int p_268303_, EnumMap<ArmorItem.Type, Integer> p_267941_, int p_268086_, SoundEvent p_268145_, float p_268058_, float p_268180_, Supplier<Ingredient> p_268256_) {
-        this.name = p_268171_;
-        this.durabilityMultiplier = p_268303_;
-        this.protectionFunctionForType = p_267941_;
-        this.enchantmentValue = p_268086_;
-        this.sound = p_268145_;
-        this.toughness = p_268058_;
-        this.knockbackResistance = p_268180_;
-        this.repairIngredient = new LazyLoadedValue<>(p_268256_);
-    }
+        @Override
+        public int getEnchantmentValue() {
+            return 8;
+        }
 
-    public int getDurabilityForType(ArmorItem.Type p_266745_) {
-        return HEALTH_FUNCTION_FOR_TYPE.get(p_266745_) * this.durabilityMultiplier;
-    }
+        @Override
+        public SoundEvent getEquipSound() {
+            return SoundEvents.ARMOR_EQUIP_GOLD;
+        }
 
-    public int getDefenseForType(ArmorItem.Type p_266752_) {
-        return this.protectionFunctionForType.get(p_266752_);
-    }
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/copper")));
+        }
 
-    public int getEnchantmentValue() {
-        return this.enchantmentValue;
-    }
+        @Override
+        public String getName() {
+            return CreateSteelEncasedCore.MOD_ID + ":copper";
+        }
 
-    public SoundEvent getEquipSound() {
-        return this.sound;
-    }
+        @Override
+        public float getToughness() {
+            return 0;
+        }
 
-    public Ingredient getRepairIngredient() {
-        return this.repairIngredient.get();
-    }
+        @Override
+        public float getKnockbackResistance() {
+            return 0;
+        }
+    };
 
-    public String getName() {
-        return this.name;
-    }
+    public static final ArmorMaterial BRASS = new ArmorMaterial() {
+        @Override
+        public int getDurabilityForType(ArmorItem.Type p_266807_) {
+            return switch (p_266807_) {
+                case HELMET -> 165;
+                case CHESTPLATE -> 240;
+                case LEGGINGS -> 255;
+                case BOOTS -> 195;
+            };
+        }
 
-    public float getToughness() {
-        return this.toughness;
-    }
+        @Override
+        public int getDefenseForType(ArmorItem.Type p_267168_) {
+            return switch (p_267168_) {
+                case HELMET -> 2;
+                case CHESTPLATE -> 6;
+                case LEGGINGS -> 5;
+                case BOOTS -> 2;
+            };
+        }
 
-    public float getKnockbackResistance() {
-        return this.knockbackResistance;
-    }
+        @Override
+        public int getEnchantmentValue() {
+            return 12;
+        }
 
-    public String getSerializedName() {
-        return this.name;
-    }
+        @Override
+        public SoundEvent getEquipSound() {
+            return SoundEvents.ARMOR_EQUIP_IRON;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/brass")));
+        }
+
+        @Override
+        public String getName() {
+            return CreateSteelEncasedCore.MOD_ID + ":brass";
+        }
+
+        @Override
+        public float getToughness() {
+            return 0;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return 0;
+        }
+    };
+
+    public static final ArmorMaterial STEEL = new ArmorMaterial() {
+        @Override
+        public int getDurabilityForType(ArmorItem.Type p_266807_) {
+            return switch (p_266807_) {
+                case HELMET -> 363;
+                case CHESTPLATE -> 528;
+                case LEGGINGS -> 495;
+                case BOOTS -> 429;
+            };
+        }
+
+        @Override
+        public int getDefenseForType(ArmorItem.Type p_267168_) {
+            return switch (p_267168_) {
+                case HELMET -> 3;
+                case CHESTPLATE -> 8;
+                case LEGGINGS -> 6;
+                case BOOTS -> 3;
+            };
+        }
+
+        @Override
+        public int getEnchantmentValue() {
+            return 16;
+        }
+
+        @Override
+        public SoundEvent getEquipSound() {
+            return SoundEvents.ARMOR_EQUIP_DIAMOND;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/steel")));
+        }
+
+        @Override
+        public String getName() {
+            return CreateSteelEncasedCore.MOD_ID + ":steel";
+        }
+
+        @Override
+        public float getToughness() {
+            return 2.0f;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return 0;
+        }
+    };
+
+    public static final ArmorMaterial NETHERSTEEL = new ArmorMaterial() {
+        @Override
+        public int getDurabilityForType(ArmorItem.Type p_266807_) {
+            return switch (p_266807_) {
+                case HELMET -> 407;
+                case CHESTPLATE -> 592;
+                case LEGGINGS -> 555;
+                case BOOTS -> 481;
+            };
+        }
+
+        @Override
+        public int getDefenseForType(ArmorItem.Type p_267168_) {
+            return switch (p_267168_) {
+                case HELMET -> 3;
+                case CHESTPLATE -> 8;
+                case LEGGINGS -> 6;
+                case BOOTS -> 3;
+            };
+        }
+
+        @Override
+        public int getEnchantmentValue() {
+            return 20;
+        }
+
+        @Override
+        public SoundEvent getEquipSound() {
+            return SoundEvents.ARMOR_EQUIP_NETHERITE;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/nethersteel")));
+        }
+
+        @Override
+        public String getName() {
+            return CreateSteelEncasedCore.MOD_ID + ":nethersteel";
+        }
+
+        @Override
+        public float getToughness() {
+            return 3.0f;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return 0.1f;
+        }
+    };
 }

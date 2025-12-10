@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "create_steel_encased_core:item/copper_boots"
+    }
+}
