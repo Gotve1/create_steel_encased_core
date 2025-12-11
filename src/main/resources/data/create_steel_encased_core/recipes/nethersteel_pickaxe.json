@@ -7,7 +7,7 @@
     ],
     "key": {
         "A": {
-            "tag": "forge:plates/nethersteel"
+            "tag": "forge:ingots/nethersteel"
         },
         "B": {
             "item": "minecraft:stick"
