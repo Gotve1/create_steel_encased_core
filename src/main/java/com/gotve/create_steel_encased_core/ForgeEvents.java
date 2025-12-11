@@ -15,7 +15,7 @@ public class ForgeEvents {
     @SubscribeEvent
     public static void editCombatTabContents(BuildCreativeModeTabContentsEvent event) {
 
-        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+        if (event.getTabKey().equals(CreativeModeTabs.COMBAT)) {
 
             // Copper
             event.getEntries().putAfter(
@@ -66,7 +66,7 @@ public class ForgeEvents {
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             event.getEntries().putAfter(
-                    Items.IRON_BOOTS.getDefaultInstance(),
+                    Items.IRON_SWORD.getDefaultInstance(),
                     new ItemStack(ItemRegistry.BRASS_SWORD.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
@@ -122,6 +122,96 @@ public class ForgeEvents {
             event.getEntries().putAfter(
                     Items.NETHERITE_SWORD.getDefaultInstance(),
                     new ItemStack(ItemRegistry.NETHERSTEEL_SWORD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+        }
+
+        if (event.getTabKey().equals(CreativeModeTabs.TOOLS_AND_UTILITIES)) {
+
+            // Copper tools
+            event.getEntries().putAfter(
+                    Items.STONE_SHOVEL.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.COPPER_SHOVEL.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.STONE_PICKAXE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.COPPER_PICKAXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.STONE_AXE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.COPPER_AXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.STONE_HOE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.COPPER_HOE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+
+            // Brass tools
+            event.getEntries().putAfter(
+                    Items.IRON_SHOVEL.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.BRASS_SHOVEL.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.IRON_PICKAXE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.BRASS_PICKAXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.IRON_AXE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.BRASS_AXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.IRON_HOE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.BRASS_HOE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+
+            // Steel
+            event.getEntries().putAfter(
+                    Items.DIAMOND_SHOVEL.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.STEEL_SHOVEL.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.DIAMOND_PICKAXE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.STEEL_PICKAXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.DIAMOND_AXE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.STEEL_AXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.DIAMOND_HOE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.STEEL_HOE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+
+            event.getEntries().putAfter(
+                    Items.NETHERITE_SHOVEL.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SHOVEL.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.NETHERITE_PICKAXE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_PICKAXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.NETHERITE_AXE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_AXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    Items.NETHERITE_HOE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_HOE.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
         }
