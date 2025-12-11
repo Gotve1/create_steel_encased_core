@@ -1,0 +1,1 @@
+{    "type": "minecraft:crafting_shaped",    "pattern": [        "AAA",        "A A",        "A A"    ],    "key": {        "A": {            "tag": "forge:plates/brass"        }    },    "result": {        "item": "create_steel_encased_core:brass_leggings",        "count": 1    }}

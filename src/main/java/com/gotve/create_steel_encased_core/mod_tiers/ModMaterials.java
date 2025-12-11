@@ -117,58 +117,6 @@ public class ModMaterials {
         }
     };
 
-    public static final ArmorMaterial STEEL = new ArmorMaterial() {
-        @Override
-        public int getDurabilityForType(ArmorItem.Type p_266807_) {
-            return switch (p_266807_) {
-                case HELMET -> 363;
-                case CHESTPLATE -> 528;
-                case LEGGINGS -> 495;
-                case BOOTS -> 429;
-            };
-        }
-
-        @Override
-        public int getDefenseForType(ArmorItem.Type p_267168_) {
-            return switch (p_267168_) {
-                case HELMET -> 3;
-                case CHESTPLATE -> 8;
-                case LEGGINGS -> 6;
-                case BOOTS -> 3;
-            };
-        }
-
-        @Override
-        public int getEnchantmentValue() {
-            return 16;
-        }
-
-        @Override
-        public SoundEvent getEquipSound() {
-            return SoundEvents.ARMOR_EQUIP_DIAMOND;
-        }
-
-        @Override
-        public Ingredient getRepairIngredient() {
-            return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/steel")));
-        }
-
-        @Override
-        public String getName() {
-            return CreateSteelEncasedCore.MOD_ID + ":steel";
-        }
-
-        @Override
-        public float getToughness() {
-            return 2.0f;
-        }
-
-        @Override
-        public float getKnockbackResistance() {
-            return 0;
-        }
-    };
-
     public static final ArmorMaterial NETHERSTEEL = new ArmorMaterial() {
         @Override
         public int getDurabilityForType(ArmorItem.Type p_266807_) {

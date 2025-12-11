@@ -1,16 +1,17 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
+        "A A",
         "AAA",
-        "A A"
+        "AAA"
     ],
     "key": {
         "A": {
-            "item": "minecraft:copper_ingot"
+            "tag": "forge:plates/brass"
         }
     },
     "result": {
-        "item": "create_steel_encased_core:copper_helmet",
+        "item": "create_steel_encased_core:brass_chestplate",
         "count": 1
     }
 }

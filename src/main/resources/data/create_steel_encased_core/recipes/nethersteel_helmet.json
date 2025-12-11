@@ -6,11 +6,14 @@
     ],
     "key": {
         "A": {
-            "item": "minecraft:copper_ingot"
+            "tag": "forge:plates/nethersteel"
+        },
+        "B": {
+            "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "create_steel_encased_core:copper_helmet",
+        "item": "create_steel_encased_core:nethersteel_helmet",
         "count": 1
     }
 }

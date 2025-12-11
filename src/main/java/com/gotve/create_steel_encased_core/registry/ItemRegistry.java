@@ -94,46 +94,6 @@ public class ItemRegistry {
 
 
     /// //////////////////////////
-    ///       Steel tools      ///
-    /// //////////////////////////
-    public static final RegistryObject<Item> STEEL_AXE = ITEMS_REGISTRY.register("steel_axe",
-            () -> new AxeItem(ItemTiers.STEEL_TIER, 5.0F, -3.0F, new Item.Properties())
-    );
-
-    public static final RegistryObject<Item> STEEL_SWORD = ITEMS_REGISTRY.register("steel_sword",
-            () -> new SwordItem(ItemTiers.STEEL_TIER, 3, -2.4F, new Item.Properties())
-    );
-
-    public static final RegistryObject<Item> STEEL_HOE = ITEMS_REGISTRY.register("steel_hoe",
-            () -> new HoeItem(ItemTiers.STEEL_TIER, -3, 0.0F, new Item.Properties())
-    );
-
-    public static final RegistryObject<Item> STEEL_PICKAXE = ITEMS_REGISTRY.register("steel_pickaxe",
-            () -> new PickaxeItem(ItemTiers.STEEL_TIER, 1, -2.8F, new Item.Properties())
-    );
-
-    public static final RegistryObject<Item> STEEL_SHOVEL = ITEMS_REGISTRY.register("steel_shovel",
-            () -> new ShovelItem(ItemTiers.STEEL_TIER, 1.5F, -3.0F, new Item.Properties())
-    );
-    /// //////////////////////////
-    ///       Steel Armour     ///
-    /// //////////////////////////
-    public static final RegistryObject<ArmorItem> STEEL_HELMET = ITEMS_REGISTRY.register("steel_helmet",
-            () -> new ArmorItem(ModMaterials.STEEL, ArmorItem.Type.HELMET, new Item.Properties()));
-
-    public static final RegistryObject<ArmorItem> STEEL_CHESTPLATE = ITEMS_REGISTRY.register("steel_chestplate",
-            () -> new ArmorItem(ModMaterials.STEEL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-
-    public static final RegistryObject<ArmorItem> STEEL_LEGGINGS = ITEMS_REGISTRY.register("steel_leggings",
-            () -> new ArmorItem(ModMaterials.STEEL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-
-    public static final RegistryObject<ArmorItem> STEEL_BOOTS = ITEMS_REGISTRY.register("steel_boots",
-            () -> new ArmorItem(ModMaterials.STEEL, ArmorItem.Type.BOOTS, new Item.Properties()));
-
-
-
-
-    /// //////////////////////////
     ///     Nethersteel tier   ///
     /// //////////////////////////
     public static final RegistryObject<Item> NETHERSTEEL_AXE = ITEMS_REGISTRY.register("nethersteel_axe",

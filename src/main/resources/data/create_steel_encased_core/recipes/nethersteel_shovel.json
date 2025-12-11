@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " A ",
+        " B ",
+        " B "
+    ],
+    "key": {
+        "A": {
+            "tag": "forge:plates/nethersteel"
+        },
+        "B": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "create_steel_encased_core:nethersteel_shovel",
+        "count": 1
+    }
+}

@@ -30,17 +30,6 @@ public class ItemTiers {
         }
     };
 
-    public static final Tier STEEL_TIER = new Tier() {
-        @Override public int getUses() { return 512; }
-        @Override public float getSpeed() { return 8.0F; }
-        @Override public float getAttackDamageBonus() { return 3.0F; }
-        @Override public int getLevel() { return 3; }
-        @Override public int getEnchantmentValue() { return 10; }
-        @Override public Ingredient getRepairIngredient() {
-            return Ingredient.of(ItemTags.create(new ResourceLocation("forge", "ingots/steel")));
-        }
-    };
-
     public static final Tier NETHERSTEEL_TIER = new Tier() {
         @Override public int getUses() { return 1024; }
         @Override public float getSpeed() { return 9.0F; }
