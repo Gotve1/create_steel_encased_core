@@ -1,1 +1,0 @@
-{    "type": "minecraft:crafting_shaped",    "pattern": [        "AAA",        "A A",        "A A"    ],    "key": {        "A": {            "tag": "forge:plates/copper"        },        "B": {            "item": "minecraft:stick"        }    },    "result": {        "item": "create_steel_encased_core:copper_leggings",        "count": 1    }}

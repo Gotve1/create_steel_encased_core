@@ -17,33 +17,6 @@ public class ForgeEvents {
 
         if (event.getTabKey().equals(CreativeModeTabs.COMBAT)) {
 
-            // Copper
-            event.getEntries().putAfter(
-                    Items.CHAINMAIL_HELMET.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_HELMET.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
-            event.getEntries().putAfter(
-                    Items.CHAINMAIL_CHESTPLATE.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_CHESTPLATE.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
-            event.getEntries().putAfter(
-                    Items.CHAINMAIL_LEGGINGS.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_LEGGINGS.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
-            event.getEntries().putAfter(
-                    Items.CHAINMAIL_BOOTS.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_BOOTS.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
-            event.getEntries().putAfter(
-                    Items.STONE_SWORD.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_SWORD.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
-
             // Brass
             event.getEntries().putAfter(
                     Items.IRON_HELMET.getDefaultInstance(),
@@ -137,28 +110,6 @@ public class ForgeEvents {
         }
 
         if (event.getTabKey().equals(CreativeModeTabs.TOOLS_AND_UTILITIES)) {
-
-            // Copper tools
-            event.getEntries().putAfter(
-                    Items.STONE_SHOVEL.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_SHOVEL.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
-            event.getEntries().putAfter(
-                    Items.STONE_PICKAXE.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_PICKAXE.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
-            event.getEntries().putAfter(
-                    Items.STONE_AXE.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_AXE.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
-            event.getEntries().putAfter(
-                    Items.STONE_HOE.getDefaultInstance(),
-                    new ItemStack(ItemRegistry.COPPER_HOE.get()),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-            );
 
             // Brass tools
             event.getEntries().putAfter(

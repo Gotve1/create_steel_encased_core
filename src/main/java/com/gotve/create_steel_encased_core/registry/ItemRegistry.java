@@ -17,43 +17,6 @@ public class ItemRegistry {
 
 
     /// //////////////////////////
-    ///      Copper Tools      ///
-    /// //////////////////////////
-    public static final RegistryObject<Item> COPPER_AXE = ITEMS_REGISTRY.register("copper_axe",
-            () -> new AxeItem(ItemTiers.COPPER_TIER, 7.0F, -3.2F, new Item.Properties())
-    );
-
-    public static final RegistryObject<Item> COPPER_SWORD = ITEMS_REGISTRY.register("copper_sword",
-            () -> new SwordItem(ItemTiers.COPPER_TIER, 3, -2.4f, new Item.Properties())
-    );
-    public static final RegistryObject<Item> COPPER_HOE = ITEMS_REGISTRY.register("copper_hoe",
-            () -> new HoeItem(ItemTiers.COPPER_TIER, -1, -2.0F, new Item.Properties())
-    );
-    public static final RegistryObject<Item> COPPER_PICKAXE = ITEMS_REGISTRY.register("copper_pickaxe",
-            () -> new PickaxeItem(ItemTiers.COPPER_TIER, 1, -2.8F, new Item.Properties())
-    );
-    public static final RegistryObject<Item> COPPER_SHOVEL = ITEMS_REGISTRY.register("copper_shovel",
-            () -> new ShovelItem(ItemTiers.COPPER_TIER, 1.5F, -3.0F, new Item.Properties())
-    );
-    /// //////////////////////////
-    ///      Copper Armour      ///
-    /// //////////////////////////
-    public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS_REGISTRY.register("copper_helmet",
-            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.HELMET, new Item.Properties()));
-
-    public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS_REGISTRY.register("copper_chestplate",
-            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-
-    public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS_REGISTRY.register("copper_leggings",
-            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-
-    public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS_REGISTRY.register("copper_boots",
-            () -> new ArmorItem(ModMaterials.COPPER, ArmorItem.Type.BOOTS, new Item.Properties()));
-
-
-
-
-    /// //////////////////////////
     ///       Brass Tools      ///
     /// //////////////////////////
     public static final RegistryObject<Item> BRASS_AXE = ITEMS_REGISTRY.register("brass_axe",
@@ -89,8 +52,6 @@ public class ItemRegistry {
 
     public static final RegistryObject<ArmorItem> BRASS_BOOTS = ITEMS_REGISTRY.register("brass_boots",
             () -> new ArmorItem(ModMaterials.BRASS, ArmorItem.Type.BOOTS, new Item.Properties()));
-
-
 
 
     /// //////////////////////////
