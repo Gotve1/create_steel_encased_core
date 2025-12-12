@@ -1,18 +1,9 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        " A ",
-        " A ",
-        " B "
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "create_steel_encased_core:brass_sword_blade" },
+        { "item": "minecraft:stick" }
     ],
-    "key": {
-        "A": {
-            "tag": "forge:plates/brass"
-        },
-        "B": {
-            "item": "minecraft:stick"
-        }
-    },
     "result": {
         "item": "create_steel_encased_core:brass_sword",
         "count": 1

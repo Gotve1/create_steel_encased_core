@@ -1,18 +1,9 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "AA ",
-        " B ",
-        " B "
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "create_steel_encased_core:brass_hoe_head" },
+        { "item": "minecraft:stick"}
     ],
-    "key": {
-        "A": {
-            "tag": "forge:plates/brass"
-        },
-        "B": {
-            "item": "minecraft:stick"
-        }
-    },
     "result": {
         "item": "create_steel_encased_core:brass_hoe",
         "count": 1

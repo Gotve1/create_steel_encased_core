@@ -22,22 +22,35 @@ public class ItemRegistry {
     public static final RegistryObject<Item> BRASS_AXE = ITEMS_REGISTRY.register("brass_axe",
             () -> new AxeItem(ItemTiers.BRASS_TIER, 6.0F, -3.1F, new Item.Properties())
     );
-
+    public static final RegistryObject<Item> BRASS_AXE_HEAD = ITEMS_REGISTRY.register("brass_axe_head",
+            () -> new Item(new Item.Properties())
+    );
     public static final RegistryObject<Item> BRASS_SWORD = ITEMS_REGISTRY.register("brass_sword",
             () -> new SwordItem(ItemTiers.BRASS_TIER, 3, -2.4F, new Item.Properties())
     );
-
+    public static final RegistryObject<Item> BRASS_SWORD_BLADE = ITEMS_REGISTRY.register("brass_sword_blade",
+            () -> new Item(new Item.Properties())
+    );
     public static final RegistryObject<Item> BRASS_HOE = ITEMS_REGISTRY.register("brass_hoe",
             () -> new HoeItem(ItemTiers.BRASS_TIER, -2, -1.0F, new Item.Properties())
     );
-
+    public static final RegistryObject<Item> BRASS_HOE_HEAD = ITEMS_REGISTRY.register("brass_hoe_head",
+            () -> new Item(new Item.Properties())
+    );
     public static final RegistryObject<Item> BRASS_PICKAXE = ITEMS_REGISTRY.register("brass_pickaxe",
             () -> new PickaxeItem(ItemTiers.BRASS_TIER, 1, -2.8F, new Item.Properties())
     );
-
+    public static final RegistryObject<Item> BRASS_PICKAXE_HEAD = ITEMS_REGISTRY.register("brass_pickaxe_head",
+            () -> new Item(new Item.Properties())
+    );
     public static final RegistryObject<Item> BRASS_SHOVEL = ITEMS_REGISTRY.register("brass_shovel",
             () -> new ShovelItem(ItemTiers.BRASS_TIER, 1.5F, -3.0F, new Item.Properties())
     );
+    public static final RegistryObject<Item> BRASS_SHOVEL_HEAD = ITEMS_REGISTRY.register("brass_shovel_head",
+            () -> new Item(new Item.Properties())
+    );
+
+
     /// //////////////////////////
     ///       Brass Armour      ///
     /// //////////////////////////
