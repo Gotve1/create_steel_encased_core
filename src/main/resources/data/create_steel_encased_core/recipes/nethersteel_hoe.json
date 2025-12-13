@@ -1,1 +1,15 @@
-{    "type": "minecraft:crafting_shaped",    "pattern": [        "AA ",        " B ",        " B "    ],    "key": {        "A": {            "tag": "forge:ingots/nethersteel"        },        "B": {            "item": "minecraft:stick"        }    },    "result": {        "item": "create_steel_encased_core:nethersteel_hoe",        "count": 1    }}
+{
+    "type": "overgeared:crafting_shapeless",
+    "category": "equipment",
+    "ingredients": [
+        {
+            "item": "create_steel_encased_core:nethersteel_hoe_head"
+        },
+        {
+            "item": "minecraft:stick"
+        }
+    ],
+    "result": {
+        "item": "create_steel_encased_core:nethersteel_hoe"
+    }
+}

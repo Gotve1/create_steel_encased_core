@@ -1,11 +1,15 @@
 {
-    "type": "minecraft:crafting_shapeless",
+    "type": "overgeared:crafting_shapeless",
+    "category": "equipment",
     "ingredients": [
-        { "item": "create_steel_encased_core:brass_pickaxe_head" },
-        { "item": "minecraft:stick"}
+        {
+            "item": "create_steel_encased_core:brass_pickaxe_head"
+        },
+        {
+            "item": "minecraft:stick"
+        }
     ],
     "result": {
-        "item": "create_steel_encased_core:brass_pickaxe",
-        "count": 1
+        "item": "create_steel_encased_core:brass_pickaxe"
     }
 }
