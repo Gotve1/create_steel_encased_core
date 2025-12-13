@@ -21,7 +21,43 @@ public class ForgeEvents {
                 new ResourceLocation("overgeared", "overgeared_tab"));
         if (event.getTabKey().equals(OVERGEARED_TAB)) {
 
+            // Copper
+            ResourceLocation OVERGEARED_COPPER_HOE_HEAD = new ResourceLocation("overgeared", "copper_hoe_head");
+            Item COPPER_HOE_HEAD = ForgeRegistries.ITEMS.getValue(OVERGEARED_COPPER_HOE_HEAD);
+            event.getEntries().putAfter(
+                    new ItemStack(COPPER_HOE_HEAD),
+                    new ItemStack(ItemRegistry.BRASS_SWORD_BLADE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.BRASS_SWORD_BLADE.get()),
+                    new ItemStack(ItemRegistry.BRASS_PICKAXE_HEAD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.BRASS_PICKAXE_HEAD.get()),
+                    new ItemStack(ItemRegistry.BRASS_AXE_HEAD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.BRASS_AXE_HEAD.get()),
+                    new ItemStack(ItemRegistry.BRASS_SHOVEL_HEAD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.BRASS_SHOVEL_HEAD.get()),
+                    new ItemStack(ItemRegistry.BRASS_HOE_HEAD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+
             // Brass
+            ResourceLocation OVERGEARED_COPPER_INGOT = new ResourceLocation("overgeared", "heated_copper_ingot");
+            Item HEATED_COPPER_INGOT = ForgeRegistries.ITEMS.getValue(OVERGEARED_COPPER_INGOT);
+            event.getEntries().putAfter(
+                    new ItemStack(HEATED_COPPER_INGOT),
+                    new ItemStack(ItemRegistry.HEATED_BRASS_INGOT.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
             ResourceLocation OVERGEARED_COPPER_BOOTS = new ResourceLocation("overgeared", "copper_hoe");
             Item COPPER_BOOTS = ForgeRegistries.ITEMS.getValue(OVERGEARED_COPPER_BOOTS);
             event.getEntries().putAfter(
@@ -135,6 +171,15 @@ public class ForgeEvents {
             event.getEntries().putAfter(
                     new ItemStack(STEEL_SHOVEL),
                     new ItemStack(STEEL_HOE),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+
+            // Nethersteel
+            ResourceLocation OVERGEARED_HEATED_STEEL_INGOT = new ResourceLocation("overgeared", "heated_steel_ingot");
+            Item HEATED_STEEL_INGOT = ForgeRegistries.ITEMS.getValue(OVERGEARED_HEATED_STEEL_INGOT);
+            event.getEntries().putAfter(
+                    new ItemStack(HEATED_STEEL_INGOT),
+                    new ItemStack(ItemRegistry.HEATED_NETHERSTEEL_INGOT.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             event.getEntries().putAfter(

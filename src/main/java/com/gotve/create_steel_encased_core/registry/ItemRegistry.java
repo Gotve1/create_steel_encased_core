@@ -19,6 +19,9 @@ public class ItemRegistry {
     /// //////////////////////////
     ///       Brass Tools      ///
     /// //////////////////////////
+    public static final RegistryObject<Item> HEATED_BRASS_INGOT = ITEMS_REGISTRY.register("heated_brass_ingot",
+            () -> new Item(new Item.Properties())
+    );
     public static final RegistryObject<Item> BRASS_AXE = ITEMS_REGISTRY.register("brass_axe",
             () -> new AxeItem(ItemTiers.BRASS_TIER, 6.0F, -3.1F, new Item.Properties())
     );
@@ -70,6 +73,10 @@ public class ItemRegistry {
     /// //////////////////////////
     ///     Nethersteel tier   ///
     /// //////////////////////////
+
+    public static final RegistryObject<Item> HEATED_NETHERSTEEL_INGOT = ITEMS_REGISTRY.register("heated_nethersteel_ingot",
+            () -> new Item(new Item.Properties())
+    );
     public static final RegistryObject<Item> NETHERSTEEL_AXE = ITEMS_REGISTRY.register("nethersteel_axe",
             () -> new AxeItem(ItemTiers.NETHERSTEEL_TIER, 5.0F, -3.0F, new Item.Properties())
     );

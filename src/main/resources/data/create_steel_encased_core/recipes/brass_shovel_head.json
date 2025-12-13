@@ -1,0 +1,28 @@
+{
+    "type": "overgeared:forging",
+    "blueprint": [
+        "shovel"
+    ],
+    "category": "misc",
+    "hammering": 6,
+    "has_polishing": true,
+    "has_quality": true,
+    "key": {
+        "#": {
+            "item": "create_steel_encased_core:heated_brass_ingot"
+        }
+    },
+    "minimum_quality": "poor",
+    "need_quenching": true,
+    "needs_minigame": false,
+    "pattern": [
+        "#"
+    ],
+    "quality_difficulty": "none",
+    "requires_blueprint": false,
+    "result": {
+        "item": "create_steel_encased_core:brass_shovel_head"
+    },
+    "show_notification": true,
+    "tier": "iron"
+}
