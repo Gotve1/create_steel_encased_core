@@ -1,9 +1,10 @@
 package com.gotve.create_steel_encased_core;
 
 import com.gotve.create_steel_encased_core.registry.ItemRegistry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -16,32 +17,59 @@ public class ForgeEvents {
     @SubscribeEvent
     public static void editCombatTabContents(BuildCreativeModeTabContentsEvent event) {
 
-        if (event.getTabKey().equals(CreativeModeTabs.COMBAT)) {
+        ResourceKey<CreativeModeTab> OVERGEARED_TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB,
+                new ResourceLocation("overgeared", "overgeared_tab"));
+        if (event.getTabKey().equals(OVERGEARED_TAB)) {
 
             // Brass
+            ResourceLocation OVERGEARED_COPPER_BOOTS = new ResourceLocation("overgeared", "copper_hoe");
+            Item COPPER_BOOTS = ForgeRegistries.ITEMS.getValue(OVERGEARED_COPPER_BOOTS);
             event.getEntries().putAfter(
-                    Items.IRON_HELMET.getDefaultInstance(),
+                    new ItemStack(COPPER_BOOTS),
                     new ItemStack(ItemRegistry.BRASS_HELMET.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
+
             event.getEntries().putAfter(
-                    Items.IRON_CHESTPLATE.getDefaultInstance(),
+                    ItemRegistry.BRASS_HELMET.get().getDefaultInstance(),
                     new ItemStack(ItemRegistry.BRASS_CHESTPLATE.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
+
             event.getEntries().putAfter(
-                    Items.IRON_LEGGINGS.getDefaultInstance(),
+                    ItemRegistry.BRASS_CHESTPLATE.get().getDefaultInstance(),
                     new ItemStack(ItemRegistry.BRASS_LEGGINGS.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
+
             event.getEntries().putAfter(
-                    Items.IRON_BOOTS.getDefaultInstance(),
+                    ItemRegistry.BRASS_LEGGINGS.get().getDefaultInstance(),
                     new ItemStack(ItemRegistry.BRASS_BOOTS.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             event.getEntries().putAfter(
-                    Items.IRON_SWORD.getDefaultInstance(),
+                    ItemRegistry.BRASS_BOOTS.get().getDefaultInstance(),
                     new ItemStack(ItemRegistry.BRASS_SWORD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    ItemRegistry.BRASS_SWORD.get().getDefaultInstance(),
+                    new ItemStack(ItemRegistry.BRASS_PICKAXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    ItemRegistry.BRASS_PICKAXE.get().getDefaultInstance(),
+                    new ItemStack(ItemRegistry.BRASS_AXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    ItemRegistry.BRASS_AXE.get().getDefaultInstance(),
+                    new ItemStack(ItemRegistry.BRASS_SHOVEL.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    ItemRegistry.BRASS_SHOVEL.get().getDefaultInstance(),
+                    new ItemStack(ItemRegistry.BRASS_HOE.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
 
@@ -49,63 +77,142 @@ public class ForgeEvents {
             ResourceLocation TFMG_STEEL_HELMET = new ResourceLocation("tfmg", "steel_helmet");
             Item STEEL_HELMET = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_HELMET);
             event.getEntries().putAfter(
-                    Items.DIAMOND_HELMET.getDefaultInstance(),
+                    ItemRegistry.BRASS_HOE.get().getDefaultInstance(),
                     new ItemStack(STEEL_HELMET),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             ResourceLocation TFMG_STEEL_CHESTPLATE = new ResourceLocation("tfmg", "steel_chestplate");
             Item STEEL_CHESTPLATE = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_CHESTPLATE);
             event.getEntries().putAfter(
-                    Items.DIAMOND_CHESTPLATE.getDefaultInstance(),
+                    new ItemStack(STEEL_HELMET),
                     new ItemStack(STEEL_CHESTPLATE),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             ResourceLocation TFMG_STEEL_LEGGINGS = new ResourceLocation("tfmg", "steel_leggings");
             Item STEEL_LEGGINGS = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_LEGGINGS);
             event.getEntries().putAfter(
-                    Items.DIAMOND_LEGGINGS.getDefaultInstance(),
+                    new ItemStack(STEEL_CHESTPLATE),
                     new ItemStack(STEEL_LEGGINGS),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             ResourceLocation TFMG_STEEL_BOOTS = new ResourceLocation("tfmg", "steel_boots");
             Item STEEL_BOOTS = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_BOOTS);
             event.getEntries().putAfter(
-                    Items.DIAMOND_BOOTS.getDefaultInstance(),
+                    new ItemStack(STEEL_LEGGINGS),
                     new ItemStack(STEEL_BOOTS),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             ResourceLocation TFMG_STEEL_SWORD = new ResourceLocation("tfmg", "steel_sword");
             Item STEEL_SWORD = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_SWORD);
             event.getEntries().putAfter(
-                    Items.DIAMOND_SWORD.getDefaultInstance(),
+                    new ItemStack(STEEL_BOOTS),
                     new ItemStack(STEEL_SWORD),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
-
-            // Nethersteel
+            ResourceLocation TFMG_STEEL_PICKAXE = new ResourceLocation("tfmg", "steel_pickaxe");
+            Item STEEL_PICKAXE = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_PICKAXE);
             event.getEntries().putAfter(
-                    Items.NETHERITE_HELMET.getDefaultInstance(),
+                    new ItemStack(STEEL_SWORD),
+                    new ItemStack(STEEL_PICKAXE),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            ResourceLocation TFMG_STEEL_AXE = new ResourceLocation("tfmg", "steel_axe");
+            Item STEEL_AXE = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_AXE);
+            event.getEntries().putAfter(
+                    new ItemStack(STEEL_PICKAXE),
+                    new ItemStack(STEEL_AXE),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            ResourceLocation TFMG_STEEL_SHOVEL = new ResourceLocation("tfmg", "steel_shovel");
+            Item STEEL_SHOVEL = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_SHOVEL);
+            event.getEntries().putAfter(
+                    new ItemStack(STEEL_AXE),
+                    new ItemStack(STEEL_SHOVEL),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            ResourceLocation TFMG_STEEL_HOE = new ResourceLocation("tfmg", "steel_hoe");
+            Item STEEL_HOE = ForgeRegistries.ITEMS.getValue(TFMG_STEEL_HOE);
+            event.getEntries().putAfter(
+                    new ItemStack(STEEL_SHOVEL),
+                    new ItemStack(STEEL_HOE),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(STEEL_HOE),
                     new ItemStack(ItemRegistry.NETHERSTEEL_HELMET.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             event.getEntries().putAfter(
-                    Items.NETHERITE_CHESTPLATE.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_HELMET.get()),
                     new ItemStack(ItemRegistry.NETHERSTEEL_CHESTPLATE.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             event.getEntries().putAfter(
-                    Items.NETHERITE_LEGGINGS.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_CHESTPLATE.get()),
                     new ItemStack(ItemRegistry.NETHERSTEEL_LEGGINGS.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             event.getEntries().putAfter(
-                    Items.NETHERITE_BOOTS.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_LEGGINGS.get()),
                     new ItemStack(ItemRegistry.NETHERSTEEL_BOOTS.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
             event.getEntries().putAfter(
-                    Items.NETHERITE_SWORD.getDefaultInstance(),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_BOOTS.get()),
                     new ItemStack(ItemRegistry.NETHERSTEEL_SWORD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SWORD.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_PICKAXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_PICKAXE.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_AXE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_AXE.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SHOVEL.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_AXE.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SHOVEL.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SHOVEL.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_HOE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+
+            ResourceLocation OVERGEARED_STEEL_HOE_HEAD = new ResourceLocation("overgeared", "steel_hoe_head");
+            Item STEEL_HOE_HEAD = ForgeRegistries.ITEMS.getValue(OVERGEARED_STEEL_HOE_HEAD);
+            event.getEntries().putAfter(
+                    new ItemStack(STEEL_HOE_HEAD),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SWORD_BLADE.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SWORD_BLADE.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_PICKAXE_HEAD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_PICKAXE_HEAD.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_AXE_HEAD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_AXE_HEAD.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SHOVEL_HEAD.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+            event.getEntries().putAfter(
+                    new ItemStack(ItemRegistry.NETHERSTEEL_SHOVEL_HEAD.get()),
+                    new ItemStack(ItemRegistry.NETHERSTEEL_HOE_HEAD.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
         }

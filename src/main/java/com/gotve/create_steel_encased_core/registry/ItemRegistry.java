@@ -73,22 +73,39 @@ public class ItemRegistry {
     public static final RegistryObject<Item> NETHERSTEEL_AXE = ITEMS_REGISTRY.register("nethersteel_axe",
             () -> new AxeItem(ItemTiers.NETHERSTEEL_TIER, 5.0F, -3.0F, new Item.Properties())
     );
+    public static final RegistryObject<Item> NETHERSTEEL_AXE_HEAD = ITEMS_REGISTRY.register("nethersteel_axe_head",
+            () -> new Item(new Item.Properties())
+    );
 
     public static final RegistryObject<Item> NETHERSTEEL_SWORD = ITEMS_REGISTRY.register("nethersteel_sword",
             () -> new SwordItem(ItemTiers.NETHERSTEEL_TIER, 3, -2.4F, new Item.Properties())
+    );
+    public static final RegistryObject<Item> NETHERSTEEL_SWORD_BLADE = ITEMS_REGISTRY.register("nethersteel_sword_blade",
+            () -> new Item(new Item.Properties())
     );
 
     public static final RegistryObject<Item> NETHERSTEEL_HOE = ITEMS_REGISTRY.register("nethersteel_hoe",
             () -> new HoeItem(ItemTiers.NETHERSTEEL_TIER, -3, 0.0F, new Item.Properties())
     );
+    public static final RegistryObject<Item> NETHERSTEEL_HOE_HEAD = ITEMS_REGISTRY.register("nethersteel_hoe_head",
+            () -> new Item(new Item.Properties())
+    );
 
     public static final RegistryObject<Item> NETHERSTEEL_PICKAXE = ITEMS_REGISTRY.register("nethersteel_pickaxe",
             () -> new PickaxeItem(ItemTiers.NETHERSTEEL_TIER, 1, -2.8F, new Item.Properties())
+    );
+    public static final RegistryObject<Item> NETHERSTEEL_PICKAXE_HEAD = ITEMS_REGISTRY.register("nethersteel_pickaxe_head",
+            () -> new Item(new Item.Properties())
     );
 
     public static final RegistryObject<Item> NETHERSTEEL_SHOVEL = ITEMS_REGISTRY.register("nethersteel_shovel",
             () -> new ShovelItem(ItemTiers.NETHERSTEEL_TIER, 1.5F, -3.0F, new Item.Properties())
     );
+    public static final RegistryObject<Item> NETHERSTEEL_SHOVEL_HEAD = ITEMS_REGISTRY.register("nethersteel_shovel_head",
+            () -> new Item(new Item.Properties())
+    );
+
+
     /// //////////////////////////
     ///   Nethersteel Armour   ///
     /// //////////////////////////

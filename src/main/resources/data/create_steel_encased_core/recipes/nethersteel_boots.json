@@ -1,16 +1,30 @@
 {
-    "type": "minecraft:crafting_shaped",
+    "type": "overgeared:forging",
+    "category": "misc",
+    "blueprint": [],
+    "requires_blueprint": false,
+    "tier": "iron",
+    "hammering": 10,
+    "has_quality": true,
+    "minimum_quality": "poor",
+    "needs_minigame": false,
+    "has_polishing": false,
+    "need_quenching": false,
     "pattern": [
         "A A",
         "A A"
     ],
+    "quality_difficulty": "master",
     "key": {
         "A": {
-            "tag": "forge:ingots/nethersteel"
+            "item": "createbigcannons:nethersteel_ingot"
         }
     },
     "result": {
-        "item": "create_steel_encased_core:nethersteel_boots",
-        "count": 1
-    }
+        "item": "create_steel_encased_core:nethersteel_boots"
+    },
+    "result_failed": {
+        "item": "createbigcannons:nethersteel_ingot"
+    },
+    "show_notification": true
 }

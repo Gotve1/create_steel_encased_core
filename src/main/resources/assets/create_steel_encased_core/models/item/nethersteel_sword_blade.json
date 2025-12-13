@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "create_steel_encased_core:item/nethersteel_sword_blade"
+    }
+}
