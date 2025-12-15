@@ -1,17 +1,31 @@
 {
-    "type": "minecraft:crafting_shaped",
+    "type": "overgeared:forging",
+    "category": "misc",
+    "blueprint": [],
+    "requires_blueprint": false,
+    "tier": "iron",
+    "hammering": 8,
+    "has_quality": true,
+    "minimum_quality": "poor",
+    "needs_minigame": false,
+    "has_polishing": false,
+    "need_quenching": false,
     "pattern": [
         "A A",
         "AAA",
         "AAA"
     ],
+    "quality_difficulty": "master",
     "key": {
         "A": {
-            "tag": "forge:plates/brass"
+            "item": "create:brass_sheet"
         }
     },
     "result": {
-        "item": "create_steel_encased_core:brass_chestplate",
-        "count": 1
-    }
+        "item": "create_steel_encased_core:brass_chestplate"
+    },
+    "result_failed": {
+        "item": "create:brass_sheet"
+    },
+    "show_notification": true
 }

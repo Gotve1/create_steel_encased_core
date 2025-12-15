@@ -1,0 +1,9 @@
+{
+    "type": "overgeared:cooling",
+    "input": {
+        "item": "create_steel_encased_core:heated_nethersteel_ingot"
+    },
+    "output": {
+        "item": "createbigcannons:nethersteel_ingot"
+    }
+}

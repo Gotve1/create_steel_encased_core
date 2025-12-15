@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "create_steel_encased_core:heated_brass_ingot",
+        "create_steel_encased_core:heated_nethersteel_ingot"
+    ]
+}
