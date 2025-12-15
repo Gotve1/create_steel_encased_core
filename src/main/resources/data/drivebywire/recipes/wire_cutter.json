@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "A A",
+        " B ",
+        "B B"
+    ],
+    "key": {
+        "A": { "item": "create:iron_sheet" },
+        "B": { "item": "minecraft:stick" }
+    },
+    "result": {
+        "item": "drivebywire:wire_cutter",
+        "count": 1
+    }
+}

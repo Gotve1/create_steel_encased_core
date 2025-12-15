@@ -1,0 +1,19 @@
+{
+    "type": "create:mechanical_crafting",
+    "pattern": [
+        "ABCDE",
+        "FF A "
+    ],
+    "key": {
+        "A": { "item": "create:sturdy_sheet" },
+        "B": { "item": "create:precision_mechanism" },
+        "C": { "item": "minecraft:ender_pearl" },
+        "D": { "item": "create:electron_tube" },
+        "E": { "item": "tfmg:cast_iron_pipe" },
+        "F": { "item": "tfmg:cast_iron_ingot" }
+    },
+    "result": {
+        "item": "the_vmod:physgun",
+        "count": 1
+    }
+}

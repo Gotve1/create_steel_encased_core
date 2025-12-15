@@ -1,0 +1,31 @@
+{
+    "type": "overgeared:forging",
+    "category": "misc",
+    "blueprint": [],
+    "requires_blueprint": false,
+    "tier": "iron",
+    "hammering": 10,
+    "has_quality": true,
+    "minimum_quality": "poor",
+    "needs_minigame": false,
+    "has_polishing": false,
+    "need_quenching": false,
+    "pattern": [
+        "AAA",
+        "A A",
+        "A A"
+    ],
+    "quality_difficulty": "master",
+    "key": {
+        "A": {
+            "item": "tfmg:heavy_plate"
+        }
+    },
+    "result": {
+        "item": "tfmg:steel_leggings"
+    },
+    "result_failed": {
+        "item": "tfmg:heavy_plate"
+    },
+    "show_notification": true
+}

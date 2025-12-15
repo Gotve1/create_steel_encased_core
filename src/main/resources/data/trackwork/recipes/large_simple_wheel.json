@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " A ",
+        "CBD",
+        "CCC"
+    ],
+    "key": {
+        "A": { "item": "createbigcannons:recoil_spring" },
+        "B": { "item": "tfmg:steel_vertical_gearbox" },
+        "C": { "item": "tfmg:steel_ingot" },
+        "D": { "item": "trackwork:large_simple_wheel_part" }
+    },
+    "result": {
+        "item": "trackwork:large_simple_wheel",
+        "count": 1
+    }
+}

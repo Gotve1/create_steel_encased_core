@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "BCB",
+        "AAA"
+    ],
+    "key": {
+        "A": { "item": "create:brass_casing" },
+        "B": { "item": "create:electron_tube" },
+        "C": { "item": "create:linked_controller" }
+    },
+    "result": {
+        "item": "drivebywire:controller_hub",
+        "count": 1
+    }
+}

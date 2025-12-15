@@ -19,7 +19,7 @@ public class CreateSteelEncasedCore {
     public CreateSteelEncasedCore() {
 
         ItemRegistry.register(bus);
-        CreativeTabRegistry.register(bus);
+        //CreativeTabRegistry.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

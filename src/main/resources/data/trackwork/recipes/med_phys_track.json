@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " AAA",
+        "ABCB",
+        "ACDC",
+        "ABCB",
+        " AAA"
+    ],
+    "key": {
+        "A": { "item": "create:belt_connector" },
+        "B": { "item": "tfmg:aluminum_ingot" },
+        "C": { "item": "tfmg:aluminum_frame" },
+        "D": { "item": "tfmg:aluminum_cogwheel" }
+    },
+    "result": {
+        "item": "trackwork:med_phys_track",
+        "count": 2
+    }
+}

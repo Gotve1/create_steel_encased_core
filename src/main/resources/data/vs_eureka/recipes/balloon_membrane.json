@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BAB",
+        "ACA",
+        "BAB"
+    ],
+    "key": {
+        "A": { "item": "minecraft:phantom_membrane"},
+        "B": { "tag": "forge:leather" },
+        "C": { "item": "minecraft:slime_ball" }
+    },
+    "result": {
+        "item": "vs_eureka:balloon",
+        "count": 8
+    }
+}
