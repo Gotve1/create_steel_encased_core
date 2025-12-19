@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ABA",
+        "BCB",
+        "ABA"
+    ],
+    "key": {
+        "A": { "tag": "forge:leather" },
+        "B": { "item": "minecraft:phantom_membrane" },
+        "C": { "item": "minecraft:blaze_powder" }
+    },
+    "result": {
+        "item": "vs_eureka:balloon"
+    }
+}

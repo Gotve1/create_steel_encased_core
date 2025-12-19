@@ -5,12 +5,12 @@
             "tag": "vs_eureka:balloons"
         },
         {
-            "item": "minecraft:water_bucket"
+            "item": "minecraft:purple_dye"
         }
     ],
     "results": [
         {
-            "item": "vs_eureka:balloon"
+            "item": "vs_eureka:purple_balloon"
         }
     ]
 }
