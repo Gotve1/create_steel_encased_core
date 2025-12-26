@@ -2,15 +2,16 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         " AAA ",
-        "AACAA",
+        "ADCDA",
         "ACBCA",
-        "AACAA",
+        "ADCDA",
         " AAA "
     ],
     "key": {
         "A": { "item": "minecraft:dried_kelp" },
         "B": { "item": "tfmg:large_aluminum_cogwheel" },
-        "C": { "item": "tfmg:aluminum_ingot" }
+        "C": { "item": "tfmg:aluminum_ingot" },
+        "D": { "item": "minecraft:dried_kelp_block" }
     },
     "result": {
         "item": "trackwork:simple_wheel_part",

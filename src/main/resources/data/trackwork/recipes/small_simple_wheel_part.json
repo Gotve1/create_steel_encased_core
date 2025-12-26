@@ -1,13 +1,14 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        " A ",
         "ABA",
-        " A "
+        "BCB",
+        "ABA"
     ],
     "key": {
         "A": { "item": "minecraft:dried_kelp" },
-        "B": { "item": "create:cogwheel" }
+        "B": { "item": "minecraft:dried_kelp_block" },
+        "C": { "item": "create:cogwheel" }
     },
     "result": {
         "item": "trackwork:small_simple_wheel_part",
